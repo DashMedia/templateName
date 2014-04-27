@@ -6,10 +6,5 @@
  * 
  * AUTHOR: Jason Carney, DashMedia.com.au
  */
-$sql = "select templatename from modx_site_templates where id=?";
-$stmt = $modx->prepare($sql);
-$stmt->execute(array($input));
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
-$oString = strtolower(str_replace(" ", "_", $row["templatename"]));
-
-return $oString;
+$tplObject = $modx->getObject('modTemplate', $input);
+return strtolower(str_replace(" ", "_", $tplObject->get('templatename')));
