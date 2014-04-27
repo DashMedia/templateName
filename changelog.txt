@@ -1,2 +1,5 @@
+==templateName 1.0.1-pl==
+-simpler version of code submitted by Vadiok
+
 ==templateName 1.0.0-pl==
 -inital release
